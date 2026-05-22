@@ -1,0 +1,10 @@
+
+n = int(input("Сколько предметов можно унести (N): "))
+items = list(map(int, input("Ценности предметов через пробел: ").split()))
+
+
+items.sort(reverse=True)
+
+max_loot_sum = sum([x for x in items[:n] if x > 0])
+
+print(max_loot_sum)
